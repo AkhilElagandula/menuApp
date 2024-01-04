@@ -2,6 +2,7 @@ package com.springboot.menuapp.menuapp.foodItem.model;
 
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -10,7 +11,9 @@ import java.util.List;
 @Document("cuisine")
 public class Cuisine {
     @Id
-    @NotBlank(message = "Name required")
+    private String id;
+    @NotBlank(message = "Name Required")
+    @Indexed(unique = true)
     private String name;
     private String image;
     private List<FoodItem> foodItems;

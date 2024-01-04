@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("foodItem")
 public class FoodItem {
     @Id
+    private String id;
     @NotBlank(message = "Name required")
     private String name;
     private String image;

@@ -3,21 +3,22 @@ package com.springboot.menuapp.menuapp.foodItem.model;
 import com.springboot.menuapp.menuapp.order.model.Order;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 @Document("user")
 public class User {
-
     @Id
+    private String id;
     @NotBlank(message = "MobileNumber required")
+    @Indexed(unique = true)
     private String mobileNumber;
     private String otp;
     private List<Order> orders;
 
     public User() {};
-
     public User(String mobileNumber, String otp, List<Order> orders) {
         this.mobileNumber = mobileNumber;
         this.otp = otp;
