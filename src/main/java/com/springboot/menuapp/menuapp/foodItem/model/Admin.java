@@ -1,6 +1,7 @@
 package com.springboot.menuapp.menuapp.foodItem.model;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -10,13 +11,11 @@ public class Admin {
     @Id
     private String id;
     @NotBlank(message = "UserName required")
-    @Indexed(unique = true)
+    @NotNull
     private String userName;
     @NotBlank(message = "Password required")
     private String password;
-
-    private AdminRole role = AdminRole.SUB;
-
+    private AdminRole role;
     public Admin() {};
 
     public Admin(String userName, String password, AdminRole role) {
