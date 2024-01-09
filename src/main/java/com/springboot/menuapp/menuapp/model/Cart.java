@@ -1,7 +1,7 @@
-package com.springboot.menuapp.menuapp.order.model;
+package com.springboot.menuapp.menuapp.model;
 
-import com.springboot.menuapp.menuapp.foodItem.model.FoodItem;
-import com.springboot.menuapp.menuapp.foodItem.model.User;
+import com.springboot.menuapp.menuapp.model.FoodItem;
+import com.springboot.menuapp.menuapp.model.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

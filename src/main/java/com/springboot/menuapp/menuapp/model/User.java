@@ -1,6 +1,5 @@
-package com.springboot.menuapp.menuapp.foodItem.model;
+package com.springboot.menuapp.menuapp.model;
 
-import com.springboot.menuapp.menuapp.order.model.Order;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

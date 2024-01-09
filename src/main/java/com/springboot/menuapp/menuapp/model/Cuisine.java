@@ -1,4 +1,4 @@
-package com.springboot.menuapp.menuapp.foodItem.model;
+package com.springboot.menuapp.menuapp.model;
 
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;

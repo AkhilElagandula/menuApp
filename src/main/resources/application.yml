@@ -1,0 +1,5 @@
+#spring:
+#data:
+#  mongodb:
+#      uri:mongodb+srv://akhilelagandula5:10Akhil%40041998@cluster0.iso080n.mongodb.net/?retryWrites=true&w=majority
+#      database:MenuApp
