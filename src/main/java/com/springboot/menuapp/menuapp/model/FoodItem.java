@@ -1,4 +1,4 @@
-package com.springboot.menuapp.menuapp.foodItem.model;
+package com.springboot.menuapp.menuapp.model;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("foodItem")
 public class FoodItem {
     @Id
+    private String id;
     @NotBlank(message = "Name required")
     private String name;
     private String image;
